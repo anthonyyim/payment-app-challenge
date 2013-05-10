@@ -1,0 +1,12 @@
+Author: Anthony Yim (anthonyyim@gmail.com)
+A simple command-line payment app. The main method is found in CommandManager.java.
+
+
+***Language Choice***
+Java because it's the language I'm currently the most comfortable with.
+
+
+***Design***
+This program is designed to be highly modular, extensible and testable. Even though there probably won't be other collaborators on this app, I designed it to be that way to give the reader a better sense of how I would code in a collatorative environment following test-driven development principles.
+
+E.g., every type of command in the application is a subclass of the Command abstract class. Each of the subclasses implement the validate and execute methods that checks whether the command is of the correct form and executes the appropriate actions for each command type. Supporting new command types is as simple as extending the Command class. In addition, by having commands as individual classes, we avoid the overhead of trying to maintain a list of if/else or case/switch statements when handling the differnt commands.
